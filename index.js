@@ -1,6 +1,12 @@
 function palindrome(string) {
   string = string.toLowerCase();
+
+  if (string.includes("_")) {
+    string = string.replace("_", "");
+  }
+
   let array = string.split(/\W/);
+
   let newString = array.join("");
   let newArray = newString.split("");
 
@@ -15,7 +21,7 @@ function palindrome(string) {
   }
 }
 
-palindrome("Kayak")
+palindrome("almostomla");
 
 //make sure all letters are lower case.
 // split into an array.
